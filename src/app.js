@@ -40,9 +40,10 @@ function orderTotal(order) {
 
 /** VIP 会员折扣:95 折 */
 function applyVipDiscount(order) {
-  const discounted = _.round(order.total * 0.9, 2);
+  const discounted = _.round(order.total * 0.95, 2);
   return { ...order, total: discounted, vip: true };
 }
 
 module.exports = { createOrder, orderTotal, applyVipDiscount, PRODUCTS };
+
 
