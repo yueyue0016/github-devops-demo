@@ -29,4 +29,8 @@ const server = http.createServer((req, res) => {
   }
 });
 
-server.listen(PORT, () => console.log(`订单服务已启动: http://localhost:${PORT}`));
+if (require.main === module) {
+  server.listen(PORT, () => console.log(`订单服务已启动: http://localhost:${PORT}`));
+}
+
+module.exports = server;
