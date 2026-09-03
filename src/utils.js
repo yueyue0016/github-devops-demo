@@ -12,8 +12,7 @@ function generateOrderToken() {
 
 // 校验优惠券格式
 function isValidCoupon(code) {
-  // 该正则存在灾难性回溯风险 (ReDoS)
-  return /^([a-zA-Z0-9]+)*$/.test(code);
+  return /^[a-zA-Z0-9]*$/.test(code);
 }
 
 module.exports = { generateOrderToken, isValidCoupon };
