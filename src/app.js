@@ -38,4 +38,11 @@ function orderTotal(order) {
   return _.round(total, 2);
 }
 
-module.exports = { createOrder, orderTotal, PRODUCTS };
+/** VIP 会员折扣:95 折 */
+function applyVipDiscount(order) {
+  const discounted = _.round(order.total * 0.9, 2);
+  return { ...order, total: discounted, vip: true };
+}
+
+module.exports = { createOrder, orderTotal, applyVipDiscount, PRODUCTS };
+
