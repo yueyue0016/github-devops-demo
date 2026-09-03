@@ -1,0 +1,16 @@
+{
+  "name": "order-service",
+  "version": "1.0.0",
+  "description": "订单服务 - GitHub 一站式 DevOps 演示项目",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test"
+  },
+  "keywords": ["devops", "demo", "github"],
+  "author": "yueyue0016",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "4.17.20"
+  }
+}
